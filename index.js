@@ -14,6 +14,7 @@ app.use(
         path.join(__dirname,'assets')
     )
 );
+
 app.use(express.json());
 app.use(express.urlencoded());
 var http = require('http').Server(app);
