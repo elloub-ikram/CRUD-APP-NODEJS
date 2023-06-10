@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> FarmLands-Profile</title>
+  </head>
+<body>
+
+  <!-- <div id="demo" class="modal">
+    <div class="modal_content"> 
+       <h3 ><p style="float: left;padding-left: 110px;padding-right: 7px;"> Sell Land </p><p style="color:hsl(28, 63%, 52%);font-size: 17px;"> "<script type="text/javascript" > document.write(nomLand)</script>" </p></h3></br></br></br>
+   
+      
+       <form action="#" method="post">
+         <div class="espace" style="margin-right: 10px;">
+           <input type="hidden" name="name" id="lnd">
+           <input type="hidden" name="surface" id="surface">
+           <input type="hidden" name="longitude" id="longitude">
+           <input type="hidden" name="latitude" id="latitude">
+             <label for="name" style="float:left ;">Price: </label>
+             <span>
+             <input style="float:left ;" type="number" id="name" name="price">
+           
+             <select name="currency" style="margin-left:7px ;">
+              
+               <option value="Ether">Ether</option>
+               <option value="Wei">Wei</option>
+             </select>
+           </span>
+           </div>
+           <div class="espace">
+             <label style="float:left ;" for="mail">Contact:</label>
+             <input type="text"   id="contact" name="contact" style="width: 267px;">
+         </div>
+         <div class="espace" >
+             <label style="float:left ;margin-top: -95px;" for="msg">Description:</label>
+            <textarea id="msg" placeholder="Land Advantages... "  name="description"></textarea>
+         </div></br>
+         <input type="hidden"  name="idLand" value = idLand >
+         <div style="float: right;" class="tag">
+           <button type="submit">Confirm</button>
+       </div>
+     </form>
+    -->
+
+
+  
+        <table>
+      
+      
+          <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+            <th>Action</th>
+
+
+          </tr>
+          <% Data.forEach(function(plante) { %>
+          <tr>
+            <td> <%= plante.name %></td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            <td>  
+            
+              <form  action="/supp_plate/<%= plante._id %>?_method=delete" method="post">
+                <button type="submit">Delete</button>
+          </form>
+              
+
+              <!-- <button onclick="window.location.href = '/supp_plate/" >suppp</button> -->
+            </td>
+
+          </tr>
+          <% });%>
+        </table>
+       
+        
+<!-- ////// ajouter/// -->
+<!-- 
+<form action="/ajouter_plante" method="post">
+  <div>
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name">
+  </div>
+  <div>
+      <label for="mail">size:</label>
+      <input type="number" id="mail" name="size">
+
+      <label for="name">quantity :</label>
+      <input type="number" id="name" name="quantity">
+
+
+      <label for="name">color :</label>
+      <input type="text" id="name" name="color">
+  </div>
+  <div>
+    <input type="submit" value="Envoyer" />
+  </div>
+</form>
+ -->
+
+</body>
+</html>
+
+
+
+
